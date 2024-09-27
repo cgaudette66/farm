@@ -1,18 +1,7 @@
+/* -------------------- IMPORTED FONTS -------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
 
-/* ---------- CSS Variables ---------- */
-:root{
-    /* Color Theme */
-    --Grn: #06A816;
-    --Orn: #E75D02;
-    --Blk: #000000;
-    --Wht: #ffffff;
-
-    /* Font Families */
-    --Habibi: Habibi;
-    --IrishG: 'Irish Grover';
-}
-
+/*-------------------- CSS RESET ---------------------------------------------------*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -62,10 +51,20 @@ table {
 	border-spacing: 0;
 }
 
-/* ---------- end css reset ---------- */
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root{
+    /* Color Theme */
+    --Grn: #06A816;
+    --Orn: #E75D02;
+    --Blk: #000000;
+    --Wht: #ffffff;
 
-/* ---------- begin css for mobile ---------- */
+    /* Font Families */
+    --Habibi: Habibi;
+    --IrishG: 'Irish Grover';
+}
 
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -260,8 +259,8 @@ dt::after {
     content: ' - ';
 }
 
-/* 836 min width */
-@media screen and (min-width: 836px) {
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width: 834px) {
     .header-class {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -298,7 +297,7 @@ dt::after {
     }
 }
 
-/* 1280px min width */
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
 @media screen and (min-width: 1280px) {
     .header-class {
         display: grid;
@@ -332,7 +331,7 @@ dt::after {
 
 }
 
-/* 1440px min width */
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 @media screen and (min-width: 1440px) {
 
     .fruit-photos, .veggie-photos {
