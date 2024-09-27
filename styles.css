@@ -139,6 +139,16 @@ nav a:hover {
     background-color: var(--Grn);
 }
 
+.topnavbutton {
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+    z-index: 100;
+}
+
+.topnavbutton a {
+    width: 75px;
+}
 
 
 /* h1 h2 h3 */
@@ -269,18 +279,7 @@ footer li {
 }
 
 
-.topbutton-outer {
-    position: relative;
-    }
-
-.topbutton {
-    position: absolute;
-    bottom: -20px;
-    right: 30px;
-    }
-
 /* 836 min width */
-
 @media screen and (min-width: 836px) {
     .header {
         display: grid;
@@ -299,11 +298,7 @@ footer li {
         justify-items: center;
     }
 
-    .fruit-photos {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .veggie-photos {
+    .fruit-photos, .veggie-photos {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -313,6 +308,7 @@ footer li {
         justify-items: space-around;
     }
 }
+
 
 
     
