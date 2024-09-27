@@ -7,6 +7,12 @@
     --Orn: #E75D02;
     --Blk: #000000;
     --Wht: #ffffff;
+
+    /* Font Families */
+    --Habibi: Habibi;
+    --IrishG: 'Irish Grover';
+
+
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -60,6 +66,7 @@ table {
 
 /* end css reset */
 
+/* begin css for mobile */
 
 * {
     box-sizing: border-box;
@@ -72,7 +79,7 @@ html {
 }
 body {
     min-width: 428px;
-    font-family: Habibi;
+    font-family: var(--Habibi);
     font-size: 1.25em;
     color: var(--Blk);
     line-height: 1.25em;
@@ -107,13 +114,13 @@ nav ul {
 }
 
 nav {
-    padding-top: 20px;
-    padding-bottom: 20px;
     background-color: var(--Wht);
+    padding: 20px;
 }
 
 nav li {
     list-style: none;
+    padding: 10px;
   }
 
 nav a {
@@ -135,13 +142,15 @@ nav a:hover {
 
 
 /* h1 h2 h3 */
-h1, h2, h3 {
-    font-family: 'Irish Grover';
+h1, h2, h3  {
+    font-family: var(--IrishG);
+    padding: 20px 10px 20px 10px;
 }
 
 h1 {
     font-size: 2.5em;
     text-shadow: 2px 2px var(--Blk);
+
 }
 
 h2 {
@@ -153,10 +162,9 @@ h3 {
     text-align: center;
 }
 
-h1, h2, h3, p {
+p  {
     padding: 10px;
-  }
-
+}
 
 
 /* main items */
@@ -270,3 +278,41 @@ footer li {
     bottom: -20px;
     right: 30px;
     }
+
+/* 836 min width */
+
+@media screen and (min-width: 836px) {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: space-around;
+        align-items: center;
+    }
+    .nav {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .nav-ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .fruit-photos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .veggie-photos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-hours {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: space-around;
+    }
+}
+
+
+    
