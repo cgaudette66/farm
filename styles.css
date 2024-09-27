@@ -98,6 +98,11 @@ header p {
     font-style: italic;
 }
 
+.header-h1 a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
 header {
     width: 100%;
     background-color: var(--Grn);
