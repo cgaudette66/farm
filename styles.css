@@ -145,7 +145,7 @@ nav a:hover {
 .topnavbutton {
 	position: fixed;
 	bottom: 10px;
-	right: 10px;
+	right: 0px;
     z-index: 100;
 }
 
@@ -175,8 +175,11 @@ h3 {
     text-align: center;
 }
 
-p  {
+header p {
     padding: 10px;
+}
+footer p  {
+    padding: 0px 0px 10px 0px;
 }
 
 
@@ -245,7 +248,7 @@ footer {
     padding-bottom: 10px;
 }
 
-
+/* adding in a dash between day and hours */
 dd::after {
     content: '\A';
     white-space: pre-line;
