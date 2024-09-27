@@ -174,11 +174,11 @@ h3 {
     text-align: center;
 }
 
-header p {
+p {
     padding: 10px;
 }
 footer p  {
-    padding: 0px 0px 10px 0px;
+    padding: 5px 10px 10px 10px;
 }
 
 
