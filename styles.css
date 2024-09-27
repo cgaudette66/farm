@@ -11,8 +11,6 @@
     /* Font Families */
     --Habibi: Habibi;
     --IrishG: 'Irish Grover';
-
-
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -64,9 +62,9 @@ table {
 	border-spacing: 0;
 }
 
-/* end css reset */
+/* ---------- end css reset ---------- */
 
-/* begin css for mobile */
+/* ---------- begin css for mobile ---------- */
 
 * {
     box-sizing: border-box;
@@ -115,7 +113,7 @@ nav ul {
 
 nav {
     background-color: var(--Wht);
-    padding: 20px;
+    padding: 20px 0px 20px 0px;
 }
 
 nav li {
@@ -151,7 +149,7 @@ nav a:hover {
 }
 
 
-/* h1 h2 h3 */
+/* ----------  h1 h2 h3 ----------  */
 h1, h2, h3  {
     font-family: var(--IrishG);
     padding: 20px 10px 20px 10px;
@@ -254,48 +252,32 @@ dt::after {
     content: ' - ';
 }
 
-
-
-  /* */
-      
-footer a {
-    text-decoration: none;
-    background-color: var(--Orn);
-    display: block;
-    text-align: center;
-    color: var(--Wht);
-    padding: 10px;
-    border: 2px solid var(--Wht);
-    width: 60px;
-  }
-
-footer a:hover {
-    color: var(--Wht);
-    background-color: var(--Grn);
-}
-
-footer li {
-    list-style: none;
-}
-
-
 /* 836 min width */
 @media screen and (min-width: 836px) {
-    .header {
+    .header-class {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        justify-items: space-around;
         align-items: center;
     }
-    .nav {
+
+
+    .header-nav {
         grid-column-start: 1;
         grid-column-end: 3;
     }
 
-    .nav-ul {
+    .header-nav-ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
+    }
+
+    .header-h1 {
+        justify-self: start;
+    }
+
+    .header-p {
+        justify-self: end;
     }
 
     .fruit-photos, .veggie-photos {
@@ -309,6 +291,45 @@ footer li {
     }
 }
 
+/* 1280px min width */
+@media screen and (min-width: 1280px) {
+    .header-class {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
 
-
+    .header-nav {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
     
+    .header-h1, .header-p {
+        justify-self: start;
+    }
+    nav {
+        background-color: var(--Grn);
+    }
+
+    .fruit-photos, .veggie-photos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #contact, #hours {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+    }
+
+}
+
+/* 1440px min width */
+@media screen and (min-width: 1440px) {
+
+    .fruit-photos, .veggie-photos {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
